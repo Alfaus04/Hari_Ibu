@@ -1,0 +1,76 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Container utama */
+.card {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tombol dan input */
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Pesan ucapan */
+#pesanUcapan {
+    margin: 20px 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Animasi bunga */
+#bungaAnimasi {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #ff69b4;
+    display: none; /* Akan tampil setelah tombol ditekan */
+}
+
+/* Tema pink */
+body.pink {
+    background-color: #ffe4e1;
+}
+
+/* Tema biru */
+body.blue {
+    background-color: #add8e6;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Ucapan Hari Ibu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Selamat Hari Ibu!</h1>
+        <p>Masukkan nama ibu tercinta:</p>
+        <input type="text" id="namaIbu" placeholder="Nama Ibu">
+        <button id="btnTampilkan">Tampilkan Ucapan</button>
+        <p id="pesanUcapan" style="display: none;"></p>
+
+        <!-- Pilihan tema -->
+        <label for="tema">Pilih Tema:</label>
+        <select id="tema">
+            <option value="default">Default</option>
+            <option value="pink">Tema Pink</option>
+            <option value="blue">Tema Biru</option>
+        </select>
+        
+        <!-- Animasi bunga -->
+        <div id="bungaAnimasi" class="hidden">
+            🌸🌸🌸 Selamat Hari Ibu! 🌸🌸🌸
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
