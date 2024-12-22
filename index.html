@@ -4,7 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu Ucapan Hari Ibu</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style untuk background lucu */
+        body {
+            background: #FFDEE9; /* Latar belakang pastel cantik */
+            background: linear-gradient(to right, #FFDEE9, #B5FFFC); /* Gradasi warna */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            background-image: url('https://via.placeholder.com/800x400.png?text=Selamat+Hari+Ibu');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            background-color: #ff7eb9;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff56a1;
+        }
+
+        #pesanUcapan {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Animasi bunga */
+        #bungaAnimasi {
+            margin-top: 20px;
+            font-size: 2.5em;
+            display: none;
+            animation: animasiBunga 2s infinite;
+        }
+
+        @keyframes animasiBunga {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <div class="card">
@@ -14,20 +91,25 @@
         <button id="btnTampilkan">Tampilkan Ucapan</button>
         <p id="pesanUcapan" style="display: none;"></p>
 
-        <!-- Pilihan tema -->
-        <label for="tema">Pilih Tema:</label>
-        <select id="tema">
-            <option value="default">Default</option>
-            <option value="pink">Tema Pink</option>
-            <option value="blue">Tema Biru</option>
-        </select>
-        
-        <!-- Animasi bunga -->
-        <div id="bungaAnimasi" class="hidden">
+        <div id="bungaAnimasi">
             🌸🌸🌸 Selamat Hari Ibu! 🌸🌸🌸
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('btnTampilkan').addEventListener('click', function() {
+            const namaIbu = document.getElementById('namaIbu').value;
+            const pesanUcapan = document.getElementById('pesanUcapan');
+            const bungaAnimasi = document.getElementById('bungaAnimasi');
+
+            if (namaIbu) {
+                pesanUcapan.textContent = `Terima kasih Ibu ${namaIbu}, Makasih banyak, Bu, atas segala kasih sayang dan pengorbanannya. Maafin anak-anak yang nggak selalu perfect. Semoga doa Ibu selalu menyertai kami, dan kami bisa jadi anak yang nggak bikin Ibu kecewa. I love you, Ibu! 💖`;
+                pesanUcapan.style.display = 'block';
+                bungaAnimasi.style.display = 'block';
+            } else {
+                alert("Masukkan nama ibu terlebih dahulu!");
+            }
+        });
+    </script>
 </body>
 </html>
